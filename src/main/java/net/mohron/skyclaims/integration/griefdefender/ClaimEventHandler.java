@@ -32,9 +32,13 @@ import com.griefdefender.api.event.CreateClaimEvent;
 import com.griefdefender.api.event.RemoveClaimEvent;
 import com.griefdefender.api.event.TrustClaimEvent;
 import com.griefdefender.api.event.UserTrustClaimEvent;
-import net.kyori.adventure.text.Component;
+import com.griefdefender.configuration.serializer.ComponentConfigSerializer;
+import com.griefdefender.lib.kyori.adventure.text.Component;
+import com.griefdefender.lib.kyori.adventure.text.serializer.ComponentSerializer;
+import com.griefdefender.lib.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
+import com.griefdefender.lib.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
+import com.griefdefender.lib.kyori.event.EventSubscriber;
 import net.kyori.adventure.text.serializer.spongeapi.SpongeComponentSerializer;
-import net.kyori.event.EventSubscriber;
 import net.mohron.skyclaims.PluginInfo;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;
@@ -55,7 +59,10 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.world.World;
+
+import static java.util.Objects.requireNonNull;
 
 public class ClaimEventHandler implements EventSubscriber<ClaimEvent> {
 
@@ -286,7 +293,7 @@ public class ClaimEventHandler implements EventSubscriber<ClaimEvent> {
   }
 
   private Component toComponent(Text text) {
-    return SpongeComponentSerializer.get().deserialize(text);
+    return GsonComponentSerializer.builder().build().deserialize(TextSerializers.JSON.serialize(requireNonNull(text, "text")));
   }
 
   private boolean isIslandDefender(com.griefdefender.api.event.Event event) {
