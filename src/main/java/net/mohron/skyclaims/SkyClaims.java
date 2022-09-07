@@ -195,7 +195,6 @@ public class SkyClaims {
     }
   }
 
-  @SuppressWarnings("OptionalGetWithoutIsPresent")
   @Listener(order = Order.LATE)
   public void onAboutToStart(GameAboutToStartServerEvent event) {
     registerDebugCommands();
