@@ -7,10 +7,7 @@ import org.spongepowered.api.block.BlockState;
 import org.spongepowered.api.block.tileentity.carrier.TileEntityCarrier;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.world.BlockChangeFlags;
-import org.spongepowered.api.world.Chunk;
-import org.spongepowered.api.world.Location;
-import org.spongepowered.api.world.World;
+import org.spongepowered.api.world.*;
 
 public class RegenerateChunkTask implements Runnable {
 
@@ -49,9 +46,11 @@ public class RegenerateChunkTask implements Runnable {
     for (int by = chunk.getBlockMin().getY(); by <= chunk.getBlockMax().getY(); by++) {
       for (int bx = chunk.getBlockMin().getX(); bx <= chunk.getBlockMax().getX(); bx++) {
         for (int bz = chunk.getBlockMin().getZ(); bz <= chunk.getBlockMax().getZ(); bz++) {
-          if (!chunk.getBlock(bx, by, bz).equals(blocks[by])) {
-            chunk.getLocation(bx, by, bz).setBlock(blocks[by], BlockChangeFlags.NONE);
-          }
+          world.regenerateChunk(bx + 8, 72, bz + 8, ChunkRegenerateFlags.ALL);
+//          if (!chunk.getBlock(bx, by, bz).equals(blocks[by])) {
+//            //chunk.getLocation(bx, by, bz).setBlock(blocks[by], BlockChangeFlags.NONE);
+//            world.regenerateChunk(bx, by, bz);
+//          }
         }
       }
     }
