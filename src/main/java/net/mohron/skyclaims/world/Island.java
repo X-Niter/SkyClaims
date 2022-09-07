@@ -31,17 +31,14 @@ import com.griefdefender.api.claim.ClaimTypes;
 import com.griefdefender.api.claim.TrustTypes;
 import com.griefdefender.api.data.PlayerData;
 import java.time.Instant;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import com.griefdefender.lib.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
+import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.spongeapi.SpongeComponentSerializer;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.exception.CreateIslandException;
@@ -70,8 +67,11 @@ import org.spongepowered.api.service.context.ContextSource;
 import org.spongepowered.api.service.user.UserStorageService;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+
+import static java.util.Objects.requireNonNull;
 
 public class Island implements ContextSource {
 
@@ -198,7 +198,7 @@ public class Island implements ContextSource {
   }
 
   public Optional<Claim> getClaim() {
-    return Optional.ofNullable(GriefDefender.getCore().getClaimManager(getWorld().getUniqueId()).getClaimByUUID(this.claim));
+    return Optional.ofNullable(Objects.requireNonNull(GriefDefender.getCore().getClaimManager(getWorld().getUniqueId())).getClaimByUUID(this.claim));
   }
 
   public Date getDateCreated() {
@@ -212,14 +212,14 @@ public class Island implements ContextSource {
   public Text getName() {
     Optional<Claim> claim = getClaim();
     return (claim.isPresent() && claim.get().getDisplayNameComponent().isPresent())
-        ? SpongeComponentSerializer.get().serialize(claim.get().getDisplayNameComponent().get())
+        ? SpongeComponentSerializer.get().serialize((Component) claim.get().getDisplayNameComponent().get())
         : Text.of(TextColors.AQUA, getOwnerName(), "'s Island");
   }
 
   public void setName(@Nullable Text name) {
     getClaim().ifPresent(claim -> {
       Sponge.getCauseStackManager().pushCause(PLUGIN.getPluginContainer());
-      claim.getData().setDisplayName(name != null ? SpongeComponentSerializer.get().deserialize(name) : null);
+      claim.getData().setDisplayName(name != null ? GsonComponentSerializer.builder().build().deserialize(TextSerializers.JSON.serialize(requireNonNull(name, "text"))) : null);
       Sponge.getCauseStackManager().popCause();
     });
   }
@@ -534,6 +534,7 @@ public class Island implements ContextSource {
   public void delete() {
     Sponge.getCauseStackManager().pushCause(PLUGIN.getPluginContainer());
     ClaimManager claimManager = GriefDefender.getCore().getClaimManager(getWorld().getUniqueId());
+    assert claimManager != null;
     getClaim().ifPresent(claimManager::deleteClaim);
     IslandManager.ISLANDS.remove(id);
     PLUGIN.getDatabase().removeIsland(this);
