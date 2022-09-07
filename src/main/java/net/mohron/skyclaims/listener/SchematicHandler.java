@@ -50,7 +50,7 @@ public class SchematicHandler {
     }
 
     Optional<ItemStack> item = player.getItemInHand(HandTypes.MAIN_HAND);
-    if (item.isPresent() && item.get().getItem().equals(ItemTypes.GOLDEN_AXE)
+    if (item.isPresent() && item.get().getType().equals(ItemTypes.GOLDEN_AXE)
         && event.getTargetBlock() != BlockSnapshot.NONE) {
       get(player).setPos2(event.getTargetBlock().getPosition());
       player.sendMessage(Text.of(TextColors.LIGHT_PURPLE,
@@ -71,7 +71,7 @@ public class SchematicHandler {
     }
 
     Optional<ItemStack> item = player.getItemInHand(HandTypes.MAIN_HAND);
-    if (item.isPresent() && item.get().getItem().equals(ItemTypes.GOLDEN_AXE)) {
+    if (item.isPresent() && item.get().getType().equals(ItemTypes.GOLDEN_AXE)) {
       get(player).setPos1(event.getTargetBlock().getPosition());
       player.sendMessage(Text.of(TextColors.LIGHT_PURPLE,
           "Position 1 set to " + event.getTargetBlock().getPosition()));
@@ -95,6 +95,7 @@ public class SchematicHandler {
       this.uid = uid;
     }
 
+    @SuppressWarnings("unused")
     public UUID getUid() {
       return this.uid;
     }
