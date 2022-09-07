@@ -26,6 +26,7 @@ import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.permissions.Permissions;
 import net.mohron.skyclaims.world.Island;
 import net.mohron.skyclaims.world.IslandManager;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;
@@ -56,7 +57,7 @@ public class CommandSetHome extends CommandBase {
     }
   }
 
-  public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
+  public @NotNull CommandResult execute(@NotNull CommandSource src, @NotNull CommandContext args) throws CommandException {
     if (!(src instanceof Player)) {
       throw new CommandException(Text.of("You must be a player to use this command!"));
     }
