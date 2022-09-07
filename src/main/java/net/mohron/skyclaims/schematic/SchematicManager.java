@@ -69,9 +69,7 @@ public class SchematicManager {
   public boolean create(Schematic schematic, String name) {
     try {
       DataContainer schematicData = DataTranslators.SCHEMATIC.translate(schematic);
-      DataFormats.NBT.writeTo(new GZIPOutputStream(new FileOutputStream(
-          new File(directory, String.format("%s.schematic", name))
-      )), schematicData);
+      DataFormats.NBT.writeTo(new GZIPOutputStream(Files.newOutputStream(new File(directory, String.format("%s.schematic", name)).toPath())), schematicData);
       plugin.getSchematicManager().getSchematics().add(new IslandSchematic(schematic, name));
       return true;
     } catch (Exception e) {
@@ -101,7 +99,7 @@ public class SchematicManager {
         final String fileName = file.getName();
         if (fileName.endsWith(SCHEMATIC_FILE_EXT)) {
           try {
-            DataContainer schematicData = DataFormats.NBT.readFrom(new GZIPInputStream(new FileInputStream(file)));
+            DataContainer schematicData = DataFormats.NBT.readFrom(new GZIPInputStream(Files.newInputStream(file.toPath())));
             List<String> missingMods = getMissingMods(schematicData);
             if (missingMods.isEmpty()) {
               Schematic schematic = DataTranslators.SCHEMATIC.translate(schematicData);
@@ -127,9 +125,7 @@ public class SchematicManager {
   public boolean save(IslandSchematic schematic) {
     try {
       DataContainer schematicData = DataTranslators.SCHEMATIC.translate(schematic.getSchematic());
-      DataFormats.NBT.writeTo(new GZIPOutputStream(new FileOutputStream(
-          new File(directory, schematic.getFileName())
-      )), schematicData);
+      DataFormats.NBT.writeTo(new GZIPOutputStream(Files.newOutputStream(new File(directory, schematic.getFileName()).toPath())), schematicData);
     } catch (Exception e) {
       plugin.getLogger().error("Error saving schematic: " + schematic.getName(), e);
       return false;
