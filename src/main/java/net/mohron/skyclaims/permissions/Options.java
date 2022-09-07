@@ -107,6 +107,7 @@ public final class Options {
     return getIntOption(playerUniqueId, MAX_TEAMMATES, 0);
   }
 
+  @SuppressWarnings("SameParameterValue")
   private static String getStringOption(UUID uuid, String option, String defaultValue) {
     Optional<Subject> subject = PERMISSION_SERVICE.getUserSubjects().getSubject(uuid.toString());
     return !subject.isPresent()
@@ -114,6 +115,7 @@ public final class Options {
         : subject.get().getOption(option).orElse(defaultValue);
   }
 
+  @SuppressWarnings("SameParameterValue")
   private static int getIntOption(UUID uuid, String option, int defaultValue, int min, int max) {
     int value = getIntOption(uuid, option, defaultValue);
     return (value < min || value > max) ? defaultValue : value;
