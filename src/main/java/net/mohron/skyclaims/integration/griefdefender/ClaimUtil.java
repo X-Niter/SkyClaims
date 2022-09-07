@@ -51,7 +51,6 @@ public final class ClaimUtil {
   private ClaimUtil() {
   }
 
-  @SuppressWarnings("OptionalGetWithoutIsPresent")
   public static Claim createIslandClaim(@Nonnull UUID ownerUniqueId, @Nonnull Region region) throws CreateIslandException {
     Sponge.getCauseStackManager().pushCause(PLUGIN.getPluginContainer());
     ClaimManager claimManager = GriefDefender.getCore().getClaimManager(PLUGIN.getConfig().getWorldConfig().getWorld().getUniqueId());
@@ -93,7 +92,7 @@ public final class ClaimUtil {
         default:
           throw new CreateIslandException(Text.of(
               TextColors.RED, "Failed to create claim: ", claimResult.getResultType(),
-              Text.NEW_LINE, claimResult.getMessage().orElse(Component.text("No message provided"))
+              Text.NEW_LINE, claimResult.getMessage().orElse((com.griefdefender.lib.kyori.adventure.text.Component) Component.text("No message provided"))
           ));
       }
     } while (claim == null);
@@ -138,7 +137,6 @@ public final class ClaimUtil {
         .build();
   }
 
-  @SuppressWarnings("OptionalGetWithoutIsPresent")
   public static void createSpawnClaim(List<Region> regions) {
     ClaimResult claimResult = ClaimUtil.createSpawnClaimResult(regions);
     if (claimResult.successful()) {
