@@ -50,6 +50,9 @@ public class WorldConfig {
   @Setting(value = "Regen-On-Create", comment = "If enabled, SkyClaims will regen the target region before an island is created.")
   private boolean regenOnCreate = false;
 
+  @Setting(value = "Reset-Player-inventory-On-Create", comment = "If enabled, SkyClaims will reset the player inventory when an island is created.")
+  private boolean resetPlayerInventoryOnCreate = false;
+
   public Optional<UUID> getWorldUuid() {
     return worldUuid.equals(NIL_UUID) ? Optional.empty() : Optional.of(worldUuid);
   }
@@ -118,5 +121,9 @@ public class WorldConfig {
 
   public boolean isRegenOnCreate() {
     return regenOnCreate;
+  }
+
+  public boolean isResetPlayerInventoryOnCreate() {
+    return resetPlayerInventoryOnCreate;
   }
 }
