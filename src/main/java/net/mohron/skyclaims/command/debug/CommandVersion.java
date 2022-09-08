@@ -20,8 +20,6 @@ package net.mohron.skyclaims.command.debug;
 
 import com.google.common.collect.Lists;
 import com.griefdefender.api.GriefDefender;
-import java.util.List;
-import java.util.Optional;
 import net.mohron.skyclaims.PluginInfo;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -36,6 +34,9 @@ import org.spongepowered.api.plugin.PluginContainer;
 import org.spongepowered.api.service.permission.PermissionService;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.List;
+import java.util.Optional;
 
 public class CommandVersion extends CommandBase {
 

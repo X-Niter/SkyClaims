@@ -25,20 +25,10 @@
 package net.mohron.skyclaims.integration.griefdefender;
 
 import com.griefdefender.api.claim.Claim;
-import com.griefdefender.api.event.BorderClaimEvent;
-import com.griefdefender.api.event.ChangeClaimEvent;
-import com.griefdefender.api.event.ClaimEvent;
-import com.griefdefender.api.event.CreateClaimEvent;
-import com.griefdefender.api.event.RemoveClaimEvent;
-import com.griefdefender.api.event.TrustClaimEvent;
-import com.griefdefender.api.event.UserTrustClaimEvent;
-import com.griefdefender.configuration.serializer.ComponentConfigSerializer;
+import com.griefdefender.api.event.*;
 import com.griefdefender.lib.kyori.adventure.text.Component;
-import com.griefdefender.lib.kyori.adventure.text.serializer.ComponentSerializer;
 import com.griefdefender.lib.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
-import com.griefdefender.lib.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import com.griefdefender.lib.kyori.event.EventSubscriber;
-import net.kyori.adventure.text.serializer.spongeapi.SpongeComponentSerializer;
 import net.mohron.skyclaims.PluginInfo;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;

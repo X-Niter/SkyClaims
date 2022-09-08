@@ -1,9 +1,5 @@
 package net.mohron.skyclaims.schematic;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
-import java.util.function.Function;
 import net.mohron.skyclaims.SkyClaims;
 import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.data.key.Keys;
@@ -18,6 +14,11 @@ import org.spongepowered.api.item.inventory.property.SlotPos;
 import org.spongepowered.api.item.inventory.query.QueryOperationTypes;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public final class SchematicUI {
 

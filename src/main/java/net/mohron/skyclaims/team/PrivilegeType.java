@@ -21,12 +21,13 @@ package net.mohron.skyclaims.team;
 import com.google.common.collect.Maps;
 import com.griefdefender.api.claim.TrustType;
 import com.griefdefender.api.claim.TrustTypes;
-import java.util.Map;
 import org.spongepowered.api.command.args.CommandElement;
 import org.spongepowered.api.command.args.GenericArguments;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.Map;
 
 public enum PrivilegeType {
   OWNER(Text.of(TextColors.BLUE, "Owner"), TrustTypes.NONE),

@@ -19,10 +19,6 @@
 package net.mohron.skyclaims.command.user;
 
 import com.google.common.collect.Lists;
-import java.util.Collection;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 import net.mohron.skyclaims.command.CommandBase.IslandCommand;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.command.argument.Arguments;
@@ -44,6 +40,11 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class CommandEntityInfo extends IslandCommand {
 

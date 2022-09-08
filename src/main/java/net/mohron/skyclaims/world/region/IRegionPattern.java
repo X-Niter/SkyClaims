@@ -18,8 +18,9 @@
 
 package net.mohron.skyclaims.world.region;
 
-import java.util.ArrayList;
 import net.mohron.skyclaims.exception.InvalidRegionException;
+
+import java.util.ArrayList;
 
 public interface IRegionPattern {
 

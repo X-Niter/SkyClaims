@@ -18,9 +18,6 @@
 
 package net.mohron.skyclaims.world.gen;
 
-import java.util.Locale;
-import java.util.Random;
-import javax.annotation.Nonnull;
 import org.spongepowered.api.block.BlockState;
 import org.spongepowered.api.block.BlockTypes;
 import org.spongepowered.api.text.translation.Translation;
@@ -28,6 +25,10 @@ import org.spongepowered.api.world.World;
 import org.spongepowered.api.world.extent.Extent;
 import org.spongepowered.api.world.gen.Populator;
 import org.spongepowered.api.world.gen.PopulatorType;
+
+import javax.annotation.Nonnull;
+import java.util.Locale;
+import java.util.Random;
 
 public class EndPortalFixPopulator implements Populator {
 

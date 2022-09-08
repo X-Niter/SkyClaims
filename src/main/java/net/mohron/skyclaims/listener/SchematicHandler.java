@@ -20,9 +20,6 @@ package net.mohron.skyclaims.listener;
 
 import com.flowpowered.math.vector.Vector3i;
 import com.google.common.collect.Maps;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
 import net.mohron.skyclaims.SkyClaimsTimings;
 import net.mohron.skyclaims.permissions.Permissions;
 import org.spongepowered.api.block.BlockSnapshot;
@@ -35,6 +32,10 @@ import org.spongepowered.api.item.ItemTypes;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
 
 public class SchematicHandler {
 

@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.world;
 
-import java.util.UUID;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;
 import net.mohron.skyclaims.permissions.Options;
@@ -31,6 +30,8 @@ import org.spongepowered.api.world.BlockChangeFlags;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
 import org.spongepowered.api.world.extent.ArchetypeVolume;
+
+import java.util.UUID;
 
 public class GenerateIslandTask implements Runnable {
 

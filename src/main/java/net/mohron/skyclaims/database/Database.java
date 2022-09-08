@@ -20,17 +20,14 @@ package net.mohron.skyclaims.database;
 
 import com.flowpowered.math.vector.Vector3d;
 import com.google.common.collect.Maps;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import net.mohron.skyclaims.SkyClaims;
+import net.mohron.skyclaims.world.Island;
+
+import java.sql.*;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import net.mohron.skyclaims.SkyClaims;
-import net.mohron.skyclaims.world.Island;
 
 public abstract class Database implements IDatabase {
 

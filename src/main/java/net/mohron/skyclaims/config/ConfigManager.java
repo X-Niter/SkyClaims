@@ -18,11 +18,6 @@
 
 package net.mohron.skyclaims.config;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.config.type.GlobalConfig;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
@@ -30,6 +25,12 @@ import ninja.leaping.configurate.loader.ConfigurationLoader;
 import ninja.leaping.configurate.objectmapping.ObjectMapper;
 import ninja.leaping.configurate.objectmapping.ObjectMappingException;
 import org.slf4j.Logger;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ConfigManager {
 

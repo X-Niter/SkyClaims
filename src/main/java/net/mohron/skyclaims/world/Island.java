@@ -23,30 +23,18 @@ import com.flowpowered.math.vector.Vector3i;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.griefdefender.api.GriefDefender;
-import com.griefdefender.api.claim.Claim;
-import com.griefdefender.api.claim.ClaimManager;
-import com.griefdefender.api.claim.ClaimResult;
-import com.griefdefender.api.claim.ClaimResultType;
-import com.griefdefender.api.claim.ClaimTypes;
-import com.griefdefender.api.claim.TrustTypes;
+import com.griefdefender.api.claim.*;
 import com.griefdefender.api.data.PlayerData;
-import java.time.Instant;
-import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
 import com.griefdefender.lib.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.spongeapi.SpongeComponentSerializer;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.exception.CreateIslandException;
 import net.mohron.skyclaims.exception.InvalidRegionException;
+import net.mohron.skyclaims.integration.griefdefender.ClaimUtil;
 import net.mohron.skyclaims.permissions.Options;
 import net.mohron.skyclaims.schematic.IslandSchematic;
 import net.mohron.skyclaims.team.PrivilegeType;
-import net.mohron.skyclaims.integration.griefdefender.ClaimUtil;
 import net.mohron.skyclaims.world.region.IRegionPattern;
 import net.mohron.skyclaims.world.region.Region;
 import net.mohron.skyclaims.world.region.SpiralRegionPattern;
@@ -70,6 +58,13 @@ import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.time.Instant;
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 

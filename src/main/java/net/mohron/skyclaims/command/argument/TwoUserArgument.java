@@ -20,9 +20,6 @@ package net.mohron.skyclaims.command.argument;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import java.util.List;
-import java.util.Optional;
-import javax.annotation.Nullable;
 import net.mohron.skyclaims.SkyClaims;
 import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.command.args.ArgumentParseException;
@@ -33,6 +30,10 @@ import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.profile.GameProfile;
 import org.spongepowered.api.service.user.UserStorageService;
 import org.spongepowered.api.text.Text;
+
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Optional;
 
 public class TwoUserArgument extends CommandElement {
 

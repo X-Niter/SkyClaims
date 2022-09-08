@@ -19,8 +19,6 @@
 package net.mohron.skyclaims.command.argument;
 
 import com.google.common.collect.Lists;
-import java.util.List;
-import javax.annotation.Nullable;
 import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.command.args.ArgumentParseException;
 import org.spongepowered.api.command.args.CommandArgs;
@@ -28,6 +26,9 @@ import org.spongepowered.api.command.args.CommandContext;
 import org.spongepowered.api.command.args.CommandElement;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class PositiveIntegerArgument extends CommandElement {
 

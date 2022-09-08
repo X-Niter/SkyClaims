@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.command.user;
 
-import java.util.function.Consumer;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.command.argument.Arguments;
@@ -38,6 +37,8 @@ import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.function.Consumer;
 
 public class CommandDelete extends CommandBase.IslandCommand {
 

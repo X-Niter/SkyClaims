@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.command.admin;
 
-import java.util.List;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.command.argument.Arguments;
@@ -35,6 +34,8 @@ import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.List;
 
 public class CommandTransfer extends CommandBase {
 

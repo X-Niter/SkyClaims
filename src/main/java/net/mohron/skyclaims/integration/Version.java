@@ -18,8 +18,9 @@
 
 package net.mohron.skyclaims.integration;
 
-import javax.annotation.Nonnull;
 import org.apache.commons.lang3.text.StrBuilder;
+
+import javax.annotation.Nonnull;
 
 public class Version implements Comparable<Version> {
 

@@ -18,8 +18,6 @@
 
 package net.mohron.skyclaims.permissions;
 
-import java.util.Optional;
-import java.util.UUID;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.command.argument.BiomeArgument;
 import net.mohron.skyclaims.schematic.IslandSchematic;
@@ -27,6 +25,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.spongepowered.api.service.permission.PermissionService;
 import org.spongepowered.api.service.permission.Subject;
 import org.spongepowered.api.world.biome.BiomeType;
+
+import java.util.Optional;
+import java.util.UUID;
 
 public final class Options {
 

@@ -18,11 +18,12 @@
 
 package net.mohron.skyclaims.database;
 
+import net.mohron.skyclaims.SkyClaims;
+import net.mohron.skyclaims.config.type.MysqlConfig;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import net.mohron.skyclaims.SkyClaims;
-import net.mohron.skyclaims.config.type.MysqlConfig;
 
 public class MysqlDatabase extends Database {
 

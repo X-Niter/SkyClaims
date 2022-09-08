@@ -20,7 +20,6 @@ package net.mohron.skyclaims.integration.nucleus;
 
 import io.github.nucleuspowered.nucleus.api.module.home.NucleusHomeService;
 import io.github.nucleuspowered.nucleus.api.module.home.exception.HomeException;
-import java.util.Optional;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -36,6 +35,8 @@ import org.spongepowered.api.command.spec.CommandSpec;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.Optional;
 
 public class CommandSetHome extends CommandBase {
 

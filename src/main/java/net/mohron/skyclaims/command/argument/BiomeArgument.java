@@ -19,10 +19,6 @@
 package net.mohron.skyclaims.command.argument;
 
 import com.google.common.collect.Lists;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.annotation.Nullable;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.permissions.Permissions;
 import org.apache.commons.lang3.text.StrBuilder;
@@ -35,6 +31,11 @@ import org.spongepowered.api.command.args.CommandElement;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.world.biome.BiomeType;
+
+import javax.annotation.Nullable;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class BiomeArgument extends CommandElement {
 

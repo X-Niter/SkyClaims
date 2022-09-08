@@ -18,13 +18,14 @@
 
 package net.mohron.skyclaims.command.argument;
 
-import java.util.Comparator;
-import java.util.function.Function;
 import net.mohron.skyclaims.world.Island;
 import org.spongepowered.api.data.key.Keys;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.Comparator;
+import java.util.function.Function;
 
 public enum IslandSortType {
   NONE(Order.ASC),

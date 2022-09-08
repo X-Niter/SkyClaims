@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.listener;
 
-import java.util.List;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;
 import net.mohron.skyclaims.exception.CreateIslandException;
@@ -34,6 +33,8 @@ import org.spongepowered.api.event.network.ClientConnectionEvent;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.List;
 
 public class ClientJoinHandler {
 

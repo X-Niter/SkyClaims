@@ -21,14 +21,6 @@ package net.mohron.skyclaims.world;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.griefdefender.api.claim.Claim;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
-import javax.annotation.Nullable;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.schematic.IslandSchematic;
 import net.mohron.skyclaims.team.PrivilegeType;
@@ -39,6 +31,11 @@ import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.scheduler.Task;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class IslandManager {
 

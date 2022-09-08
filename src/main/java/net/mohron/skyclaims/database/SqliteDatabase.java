@@ -21,20 +21,16 @@ package net.mohron.skyclaims.database;
 import com.flowpowered.math.vector.Vector3d;
 import com.google.common.collect.Maps;
 import com.google.common.io.Files;
-import java.io.File;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.config.type.StorageConfig;
 import net.mohron.skyclaims.world.Island;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class SqliteDatabase extends Database {
 

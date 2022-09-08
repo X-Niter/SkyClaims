@@ -19,8 +19,6 @@
 package net.mohron.skyclaims.command.debug;
 
 import com.google.common.collect.Lists;
-import java.util.List;
-import java.util.UUID;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.permissions.Options;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -40,6 +38,9 @@ import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColor;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+
+import java.util.List;
+import java.util.UUID;
 
 public class CommandPlayerInfo extends CommandBase {
 

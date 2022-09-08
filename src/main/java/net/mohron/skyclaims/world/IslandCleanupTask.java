@@ -20,16 +20,17 @@ package net.mohron.skyclaims.world;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
-import java.time.Duration;
-import java.time.Instant;
-import java.util.Collection;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;
 import net.mohron.skyclaims.permissions.Options;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.scheduler.SpongeExecutorService;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Collection;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 public class IslandCleanupTask implements Runnable {
 

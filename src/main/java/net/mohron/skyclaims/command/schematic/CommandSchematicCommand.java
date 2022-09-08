@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.command.schematic;
 
-import java.util.List;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.command.argument.Arguments;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -31,6 +30,8 @@ import org.spongepowered.api.command.args.GenericArguments;
 import org.spongepowered.api.command.spec.CommandSpec;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.util.List;
 
 public class CommandSchematicCommand extends CommandBase {
 

@@ -18,10 +18,11 @@
 
 package net.mohron.skyclaims.database;
 
+import net.mohron.skyclaims.world.Island;
+
 import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
-import net.mohron.skyclaims.world.Island;
 
 public interface IDatabase {
 

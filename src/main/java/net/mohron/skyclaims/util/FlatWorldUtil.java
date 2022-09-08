@@ -18,7 +18,6 @@
 
 package net.mohron.skyclaims.util;
 
-import java.util.Arrays;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.exception.SkyClaimsException;
 import org.apache.commons.lang3.StringUtils;
@@ -27,6 +26,8 @@ import org.spongepowered.api.block.BlockState;
 import org.spongepowered.api.block.BlockType;
 import org.spongepowered.api.block.BlockTypes;
 import org.spongepowered.api.text.Text;
+
+import java.util.Arrays;
 
 public final class FlatWorldUtil {
 

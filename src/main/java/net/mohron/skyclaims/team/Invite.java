@@ -18,11 +18,6 @@
 
 package net.mohron.skyclaims.team;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-
-import java.time.Instant;
-import javax.annotation.Nonnull;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.world.Island;
 import net.mohron.skyclaims.world.IslandManager;
@@ -33,6 +28,12 @@ import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import javax.annotation.Nonnull;
+import java.time.Instant;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public class Invite {
 

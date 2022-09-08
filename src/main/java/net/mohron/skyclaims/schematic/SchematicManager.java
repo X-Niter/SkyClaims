@@ -19,9 +19,15 @@
 package net.mohron.skyclaims.schematic;
 
 import com.google.common.collect.Lists;
+import net.mohron.skyclaims.SkyClaims;
+import org.spongepowered.api.Sponge;
+import org.spongepowered.api.data.DataContainer;
+import org.spongepowered.api.data.DataQuery;
+import org.spongepowered.api.data.persistence.DataFormats;
+import org.spongepowered.api.data.persistence.DataTranslators;
+import org.spongepowered.api.world.schematic.Schematic;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -33,13 +39,6 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
-import net.mohron.skyclaims.SkyClaims;
-import org.spongepowered.api.Sponge;
-import org.spongepowered.api.data.DataContainer;
-import org.spongepowered.api.data.DataQuery;
-import org.spongepowered.api.data.persistence.DataFormats;
-import org.spongepowered.api.data.persistence.DataTranslators;
-import org.spongepowered.api.world.schematic.Schematic;
 
 public class SchematicManager {
 

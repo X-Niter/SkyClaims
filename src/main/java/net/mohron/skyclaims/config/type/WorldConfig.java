@@ -18,9 +18,6 @@
 
 package net.mohron.skyclaims.config.type;
 
-import java.util.NoSuchElementException;
-import java.util.Optional;
-import java.util.UUID;
 import net.mohron.skyclaims.SkyClaims;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
@@ -28,6 +25,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+
+import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.UUID;
 
 @ConfigSerializable
 public class WorldConfig {

@@ -21,11 +21,6 @@ package net.mohron.skyclaims.team;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Table;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.permissions.Options;
 import net.mohron.skyclaims.world.IslandManager;
@@ -37,6 +32,12 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class InviteService {
 

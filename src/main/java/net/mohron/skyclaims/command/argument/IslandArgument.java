@@ -20,12 +20,6 @@ package net.mohron.skyclaims.command.argument;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import javax.annotation.Nullable;
 import net.mohron.skyclaims.permissions.Permissions;
 import net.mohron.skyclaims.team.PrivilegeType;
 import net.mohron.skyclaims.world.Island;
@@ -38,6 +32,13 @@ import org.spongepowered.api.command.args.CommandElement;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
+
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class IslandArgument extends CommandElement {
 

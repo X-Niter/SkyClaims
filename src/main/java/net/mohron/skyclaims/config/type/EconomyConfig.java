@@ -1,11 +1,12 @@
 package net.mohron.skyclaims.config.type;
 
-import java.util.Optional;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.service.economy.Currency;
 import org.spongepowered.api.service.economy.EconomyService;
+
+import java.util.Optional;
 
 @ConfigSerializable
 public class EconomyConfig {

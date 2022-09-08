@@ -21,9 +21,6 @@ package net.mohron.skyclaims.world;
 import com.flowpowered.math.vector.Vector3i;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.config.type.WorldConfig;
 import net.mohron.skyclaims.schematic.IslandSchematic;
@@ -35,6 +32,10 @@ import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.scheduler.SpongeExecutorService;
 import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 public class RegenerateRegionTask implements Runnable {
 

@@ -18,40 +18,16 @@
 
 package net.mohron.skyclaims.command;
 
-import static net.mohron.skyclaims.PluginInfo.NAME;
-import static net.mohron.skyclaims.PluginInfo.VERSION;
-
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import net.mohron.skyclaims.command.admin.CommandReload;
 import net.mohron.skyclaims.command.admin.CommandTransfer;
 import net.mohron.skyclaims.command.argument.IslandSortType;
 import net.mohron.skyclaims.command.schematic.CommandSchematic;
-import net.mohron.skyclaims.command.team.CommandDemote;
-import net.mohron.skyclaims.command.team.CommandInvite;
-import net.mohron.skyclaims.command.team.CommandKick;
-import net.mohron.skyclaims.command.team.CommandLeave;
-import net.mohron.skyclaims.command.team.CommandPromote;
-import net.mohron.skyclaims.command.user.CommandCreate;
-import net.mohron.skyclaims.command.user.CommandDelete;
-import net.mohron.skyclaims.command.user.CommandEntityInfo;
-import net.mohron.skyclaims.command.user.CommandExpand;
-import net.mohron.skyclaims.command.user.CommandInfo;
-import net.mohron.skyclaims.command.user.CommandList;
-import net.mohron.skyclaims.command.user.CommandLock;
-import net.mohron.skyclaims.command.user.CommandReset;
-import net.mohron.skyclaims.command.user.CommandSetBiome;
-import net.mohron.skyclaims.command.user.CommandSetName;
-import net.mohron.skyclaims.command.user.CommandSetSpawn;
-import net.mohron.skyclaims.command.user.CommandSpawn;
-import net.mohron.skyclaims.command.user.CommandUnlock;
+import net.mohron.skyclaims.command.team.*;
+import net.mohron.skyclaims.command.user.*;
 import net.mohron.skyclaims.integration.nucleus.CommandHome;
 import net.mohron.skyclaims.integration.nucleus.CommandSetHome;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -70,6 +46,15 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import static net.mohron.skyclaims.PluginInfo.NAME;
+import static net.mohron.skyclaims.PluginInfo.VERSION;
 
 public class CommandIsland extends CommandBase {
 

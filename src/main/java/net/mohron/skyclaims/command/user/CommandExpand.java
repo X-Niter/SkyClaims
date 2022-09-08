@@ -22,9 +22,6 @@ import com.griefdefender.api.GriefDefender;
 import com.griefdefender.api.claim.Claim;
 import com.griefdefender.api.claim.ClaimBlockSystem;
 import com.griefdefender.api.data.PlayerData;
-import java.math.BigDecimal;
-import java.util.Optional;
-import java.util.function.Consumer;
 import net.mohron.skyclaims.command.CommandBase.IslandCommand;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.command.argument.Arguments;
@@ -49,6 +46,10 @@ import org.spongepowered.api.service.economy.transaction.TransactionResult;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
+
+import java.math.BigDecimal;
+import java.util.Optional;
+import java.util.function.Consumer;
 
 public class CommandExpand extends IslandCommand {
 

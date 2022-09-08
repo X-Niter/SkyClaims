@@ -17,7 +17,6 @@
  */
 package net.mohron.skyclaims.listener;
 
-import java.util.Optional;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.SkyClaimsTimings;
 import net.mohron.skyclaims.world.Island;
@@ -28,6 +27,8 @@ import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.entity.living.humanoid.player.RespawnPlayerEvent;
 import org.spongepowered.api.event.filter.cause.Root;
 import org.spongepowered.api.world.World;
+
+import java.util.Optional;
 
 public class RespawnHandler {
 

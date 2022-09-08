@@ -18,14 +18,15 @@
 
 package net.mohron.skyclaims.config.type;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.command.argument.IslandSortType;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 import org.spongepowered.api.item.ItemType;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 @ConfigSerializable
 public class MiscConfig {

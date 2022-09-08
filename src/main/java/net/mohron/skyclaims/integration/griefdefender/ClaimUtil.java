@@ -18,9 +18,6 @@
 
 package net.mohron.skyclaims.integration.griefdefender;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import com.flowpowered.math.vector.Vector3i;
 import com.griefdefender.api.GriefDefender;
 import com.griefdefender.api.claim.Claim;
@@ -28,10 +25,6 @@ import com.griefdefender.api.claim.ClaimManager;
 import com.griefdefender.api.claim.ClaimResult;
 import com.griefdefender.api.claim.ClaimTypes;
 import com.griefdefender.api.data.PlayerData;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-import javax.annotation.Nonnull;
 import net.kyori.adventure.text.Component;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.exception.CreateIslandException;
@@ -43,6 +36,14 @@ import org.spongepowered.api.service.user.UserStorageService;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.world.World;
+
+import javax.annotation.Nonnull;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public final class ClaimUtil {
 

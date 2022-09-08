@@ -18,10 +18,7 @@
 
 package net.mohron.skyclaims.command.schematic;
 
-import static org.spongepowered.api.command.args.GenericArguments.string;
-
 import com.flowpowered.math.vector.Vector3i;
-import java.time.Instant;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.listener.SchematicHandler;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -35,6 +32,10 @@ import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.world.extent.ArchetypeVolume;
 import org.spongepowered.api.world.schematic.BlockPaletteTypes;
 import org.spongepowered.api.world.schematic.Schematic;
+
+import java.time.Instant;
+
+import static org.spongepowered.api.command.args.GenericArguments.string;
 
 public class CommandSchematicCreate extends CommandBase.PlayerCommand {
 

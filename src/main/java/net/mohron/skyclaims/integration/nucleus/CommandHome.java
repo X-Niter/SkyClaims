@@ -21,7 +21,6 @@ package net.mohron.skyclaims.integration.nucleus;
 import io.github.nucleuspowered.nucleus.api.module.home.NucleusHomeService;
 import io.github.nucleuspowered.nucleus.api.module.home.data.Home;
 import io.github.nucleuspowered.nucleus.api.util.data.NamedLocation;
-import java.util.Optional;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.permissions.Permissions;
@@ -38,6 +37,8 @@ import org.spongepowered.api.entity.living.player.User;
 import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.world.World;
+
+import java.util.Optional;
 
 public class CommandHome extends CommandBase {
   public static final String HELP_TEXT = "teleport to your home island.";

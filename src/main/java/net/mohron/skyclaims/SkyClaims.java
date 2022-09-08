@@ -21,12 +21,6 @@ package net.mohron.skyclaims;
 import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.griefdefender.api.GriefDefender;
-import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 import net.mohron.skyclaims.command.CommandIsland;
 import net.mohron.skyclaims.command.debug.CommandPlayerInfo;
 import net.mohron.skyclaims.command.debug.CommandVersion;
@@ -69,11 +63,7 @@ import org.spongepowered.api.event.Order;
 import org.spongepowered.api.event.filter.Getter;
 import org.spongepowered.api.event.game.GameRegistryEvent;
 import org.spongepowered.api.event.game.GameReloadEvent;
-import org.spongepowered.api.event.game.state.GameAboutToStartServerEvent;
-import org.spongepowered.api.event.game.state.GameConstructionEvent;
-import org.spongepowered.api.event.game.state.GameInitializationEvent;
-import org.spongepowered.api.event.game.state.GameStartedServerEvent;
-import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
+import org.spongepowered.api.event.game.state.*;
 import org.spongepowered.api.event.world.ConstructWorldPropertiesEvent;
 import org.spongepowered.api.event.world.LoadWorldEvent;
 import org.spongepowered.api.plugin.Dependency;
@@ -87,6 +77,13 @@ import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.World;
 import org.spongepowered.api.world.gen.WorldGeneratorModifier;
 import org.spongepowered.api.world.storage.WorldProperties;
+
+import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 @Plugin(
     id = PluginInfo.ID,

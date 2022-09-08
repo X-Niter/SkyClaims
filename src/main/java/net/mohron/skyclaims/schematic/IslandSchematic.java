@@ -19,13 +19,6 @@
 package net.mohron.skyclaims.schematic;
 
 import com.google.common.collect.Lists;
-import java.time.Instant;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 import net.mohron.skyclaims.SkyClaims;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.data.DataQuery;
@@ -37,6 +30,10 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.world.biome.BiomeType;
 import org.spongepowered.api.world.schematic.Schematic;
+
+import java.time.Instant;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class IslandSchematic {
 

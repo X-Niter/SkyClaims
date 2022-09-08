@@ -8,7 +8,7 @@ package net.mohron.skyclaims.integration.griefdefender;
 
 import com.griefdefender.api.GriefDefender;
 import com.griefdefender.api.event.ClaimEvent;
-import net.kyori.event.EventSubscription;
+import com.griefdefender.lib.kyori.event.EventSubscription;
 import net.mohron.skyclaims.SkyClaims;
 import net.mohron.skyclaims.config.type.integration.GriefDefenderConfig;
 import org.spongepowered.api.event.Listener;

@@ -18,8 +18,6 @@
 
 package net.mohron.skyclaims.command.schematic;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import net.mohron.skyclaims.command.CommandBase;
 import net.mohron.skyclaims.permissions.Permissions;
 import net.mohron.skyclaims.schematic.IslandSchematic;
@@ -35,6 +33,9 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CommandSchematicList extends CommandBase {
 
