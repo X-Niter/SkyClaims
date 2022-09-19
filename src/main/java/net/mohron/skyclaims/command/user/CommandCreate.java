@@ -27,6 +27,7 @@ import net.mohron.skyclaims.permissions.Permissions;
 import net.mohron.skyclaims.schematic.IslandSchematic;
 import net.mohron.skyclaims.world.Island;
 import net.mohron.skyclaims.world.IslandManager;
+import org.spongepowered.api.Sponge;
 import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;
 import org.spongepowered.api.command.CommandSource;
@@ -63,6 +64,9 @@ public class CommandCreate extends ListSchematicCommand {
 
   @Override
   public CommandResult execute(Player player, CommandContext args) throws CommandException {
+
+    //return Sponge.getCommandManager().process(Sponge.getServer().getConsole(), "topography island new " + player.getName());
+
     if (hasPlayerReachedMaxIslands(player)) {
       throw new CommandException(Text.of(TextColors.RED, "You have reached your maximum number of islands!"));
     }
@@ -91,9 +95,7 @@ public class CommandCreate extends ListSchematicCommand {
 
     try {
       Island island = new Island(player, schematic);
-      if (PLUGIN.getConfig().getWorldConfig().isResetPlayerInventoryOnCreate()) {
-        clearIslandMemberInventories(island, Permissions.KEEP_INV_PLAYER_CREATE, Permissions.KEEP_INV_ENDERCHEST_CREATE);
-      }
+      clearIslandMemberInventories(island, Permissions.KEEP_INV_PLAYER_CREATE, Permissions.KEEP_INV_ENDERCHEST_CREATE);
       return CommandResult.success();
     } catch (CreateIslandException e) {
       throw new CommandException(Text.of(TextColors.RED, "Unable to create island!", Text.NEW_LINE, TextColors.RESET, e.getText()));

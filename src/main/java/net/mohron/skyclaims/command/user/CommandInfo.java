@@ -40,6 +40,7 @@ import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 import org.spongepowered.api.text.format.TextStyles;
+import org.spongepowered.api.world.biome.BiomeType;
 
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -103,6 +104,7 @@ public class CommandInfo extends CommandBase {
             TextColors.YELLOW, "Last Active", TextColors.WHITE, " : ", TextColors.GRAY, sdf.format(island.getDateLastActive()), Text.NEW_LINE,
             TextColors.YELLOW, "UUID", TextColors.WHITE, " : ", TextColors.GRAY,
             island.getUniqueId(), Text.NEW_LINE,
+            TextColors.YELLOW, "Biome", TextColors.WHITE, " : ", TextColors.GRAY, island.getWorld().getBiome(((Player) src).getPosition().toInt()), Text.NEW_LINE,
             island.getClaim().isPresent() ? Text.of(
                 TextColors.YELLOW, "Claim", TextColors.WHITE, " : ", TextColors.GRAY, Text.builder(
                     island.getClaimUniqueId().toString())

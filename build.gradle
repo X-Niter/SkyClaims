@@ -62,6 +62,7 @@ dependencies {
     annotationProcessor("org.spongepowered:spongeapi:${spongeapi}")
     implementation("org.spongepowered:spongeapi:${spongeapi}")
     implementation(files("Libs/griefdefender-sponge-2.2.3.jar"))
+    implementation(files("Libs/Topography-1.12.2-1.14.4.jar"))
     //implementation("com.griefdefender:api:2.0.0-SNAPSHOT")
     implementation("net.luckperms:api:5.3") // DO NOT USE 5.4, SpongeForge 1.12.2 only goes up to 5.3.98 of LuckPerms
     implementation("net.kyori:adventure-api:4.9.0")
